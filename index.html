@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/images/logo.png" type="image/x-icon">
+    <title>Yummy</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <div class="loading-screen position-fixed top-0 start-0 end-0 bottom-0 bg-black justify-content-center align-items-center">
+        <i class="fa fa-spinner fa-spin fa-5x"></i>
+    </div>
+
+    <div class="container w-75" id="search-container"></div>
+    <div class="inner-loading-screen top-0 start-0 end-0 bottom-0 justify-content-center align-items-center" style="display: flex; display: none">
+        <i class="fa fa-spinner fa-spin fa-5x"></i>
+    </div>
+
+
+    <nav class="position-fixed d-flex top-0">
+
+        <div class="nav-body d-flex flex-column justify-content-between vh-100 p-4">
+                <ul class="links list-unstyled">
+                    <li id="search-input" class="py-2 position-relative cursor-pointer">Search</li>
+                    <li id="categories-input" class="py-2 position-relative cursor-pointer">Categories</li>
+                    <li id="area-input" class="py-2 position-relative cursor-pointer">Area</li>
+                    <li id="ingredients-input" class="py-2 position-relative cursor-pointer">Ingredients</li>
+                    <li id="contact" class="py-2 position-relative cursor-pointer">Contact Us</li>
+                </ul>
+
+            <div class="nav-footer">
+                <div class="icons">
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-solid fa-globe"></i>
+                </div>
+
+                <div class="footer">
+                    <p>Copyright © 2023 All Rights <br>Reserved.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="nav-header d-flex flex-column justify-content-between py-4 text-center px-2 bg-white text-black">
+            <img onclick="getMealDetails('test')" class="logo" src="assets/images/logo.png" alt="" srcset="">
+            <i class="fa-solid open-close-icon fa-2x fa-align-justify"></i>
+            <div>
+                <i class="fa-solid fa-globe d-block"></i>
+                <i class="fa-solid fa-share-nodes"></i>
+            </div>
+        </div>
+
+    </nav>
+
+    <section id="mainPage" class="container my-5 min-vh-100 position-relative"></section>
+
+    
+    <section id="meal-details" class="position-fixed top-0 w-100 vh-100 pb-5" style="display: none">
+        <div class="container">
+            <header class="hstack justify-content-end">
+                <!-- <h1 class="text-center h3 py-4">Meal Game</h1> -->
+                <button id="btnClose" class="btn-close btn-close-white py-4" ></button>
+            </header>
+            <div class="row g-4" id="meal-details-content">
+                
+            </div>
+        </div>
+    </section>
+
+
+    <script src="https://kit.fontawesome.com/63fbc33e4f.js" crossorigin="anonymous"></script>
+    <script src="assets/js/bootstrap.bundle.js"></script>
+    <script src="assets/js/jquery-3.6.3.js"></script>
+    <script type="module" src="assets/js/api.module.js"></script>
+    <script type="module" src="assets/js/gameDetails.module.js"></script>
+    <script type="module" src="assets/js/main.js"></script>
+</body>
+</html>
